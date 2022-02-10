@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.logo img {
+    float: left;
+    width: 15rem;
+    padding: 1rem 1rem;
+}
