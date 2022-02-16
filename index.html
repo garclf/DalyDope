@@ -7,32 +7,127 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;600&family=Italiana&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./imgs/DalyDope_New_White.png" alt="" srcset="">
-        </div>
-        <div class="navigation-right">
-            <ul>
-                <li><a href="http://">Home</a></li>
-                <li><a href="http://">About Us</a></li>
-                <li><a href="http://">Contact Us</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <section class="banner">
-        <div class="container">
-            <div class="splash-text">
-                <h1>Your Vibe <br>attracts your Tribe</h1>
-                <p>Your body is your most <br>priceless possession</p>
-                <a class="btn" href="#">Take Care of It</a>
+    <main id="luxy">
+        <header>
+            <div class="logo" data-aos="fade-down" data-aos-duration="1500">
+                <img src="./imgs/DalyDope_New_White.png" alt="" srcset="">
             </div>
-        </div>
-    </section>
+            <div class="navigation-right" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
+    
+        <section class="banner luxy_el">
+            <div class="container">
+                <div class="splash-text">
+                    <h1 data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1300">Your Vibe <br>attracts your Tribe</h1>
+                    <p data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="2000">Your body is your most <br>priceless possession</p>
+                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2800"class="btn" href="#">Take Care of It</a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="mv-container luxy_el">
+           <div class="m-sec">
+                <div class="mv-sec-text">
+                    <h2>Daly Dope <br>Mission</h2>
+                    <div class="mv-sec-text-desc">
+                        <div class="mv-sec-text-desc--p">
+                            <p>Daly Dope takes pride in the unique and luxurious atmosphere that we have created for our customers. 
+                                Our biggest desire is to educate our customers and provide you with the  highest quality marijuana products at the best possible price.  
+                                With a wide selection of flower, edibles, concentrates, topicals, and CBD products, our goal is to be recognized as one of Michigan's best locally 
+                                owned provisioning centers. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mv-sec-img">
+                    <img src="imgs/mission.png" alt="" srcset="">
+                </div>
+           </div>
+        </section>
+    
+        <section class="mv-container luxy_el">
+           <div class="v-sec">
+                <div class="mv-sec-img">
+                    <img src="imgs/nature.jpg" alt="" srcset="">
+                </div>
+                <div class="mv-sec-text">
+                    <h2>Daly Dope <br>is Hiring</h2>
+                    <div class="mv-sec-text-desc">
+                        <div class="mv-sec-text-desc--p">
+                            <p> 
+                                Yes! Daly Dope is hiring. Our most important goal is our customer's
+                                satisfaction, so we'll be more than happy to hire the best employees. Please
+                                submit your resume now
+                            </p>
+                            <a href="mailto:info@dalydope.com" class="btn">Apply</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+    
+        <section class="vid-sec luxy_el">
+            <div class="overlay-text">
+                <h2>Relax and Unwind</h2>
+            </div>
+            <video preload muted loop poster="imgs/arthouse_ad_2_poster.png">
+                <source src="videos/arthouse_ad_2.mp4" type="video/mp4">
+            </video>
+    
+        </section>
+    
+        <footer class="luxy_el">
+            <div class="circular-text">
+                <img src="imgs/DopeRound_white.png" alt="" srcset="">
+            </div>
+            <p>For Inquiry</p>
+            <a href="mailto:info@dalydope.com">info@dalydope.com</a>
+        </footer>
+    </main>
+   
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Luxy JS -->
+    <script src="js/luxy.js"></script>
+
+    <script type="text/javascript">
+
+        AOS.init();
+
+        luxy.init({
+            wrapper: '#luxy',
+            targets: '.luxy-el',
+            wrapperSpeed: 0.08
+        })
+
+        $(document).ready(function() {
+            $(".vid-sec video").hover( function() {
+                $(this).get(0).play();
+            })
+        })
+        
+    </script>
 </body>
 </html>

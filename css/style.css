@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    color: #fff;
+    color: #e5e5e5;
     background-color: #000;
     font-family: 'Space Grotesk';
     font-size: 1.6rem;
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-header {
+/* header {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,12 +45,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+}
 
 .logo img {
     float: left;
-    width: 15rem;
+    width: 20rem;
     padding: 1rem 1rem;
 }
 
@@ -60,7 +69,7 @@ header ul {
 
 header ul li {
     list-style: none;
-    display: inline-block;
+    display: inline-table;
     margin: 0 2rem;
 }
 
@@ -68,15 +77,37 @@ header ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    position: relative;
+}
+
+header ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    width: 0;
+    height: .1rem;
+    background-color: #fff;
+    transition: all ease 1s;
+}
+
+header ul li a:hover::before {
+    width: 100%;
 }
 
 .banner {
     height: 100vh;
-    background-color: url(../imgs/banner.jpg) no-repeat;
+    background: 
+    linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .6),
+        rgba(0, 0, 0, .9)
+    ),
+    url(../imgs/banner.jpg) no-repeat;
     background-size: cover;
     background-position: top;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .banner .splash-text {
@@ -85,13 +116,15 @@ header ul li a {
 }
 
 .banner h1 {
-    line-height: 8rem;
+    /* line-height: 8rem; */
     font-weight: 300;
+    font-size: 10rem;
     margin-bottom: 1rem;
 }
 
 .banner p {
     font-family: 'Space Grotesk';
+    font-size: 1.8rem;
 }
 
 .btn {
@@ -133,4 +166,131 @@ header ul li a {
     height: 100%;
 }
 
-.
+.mv-container {
+    margin: 0 18rem;
+}
+
+.m-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0
+}
+
+.mv-sec-text {
+    max-width: 50rem;
+}
+
+.mv-sec-text:nth-child(odd) {
+    padding-left: 5rem;
+    border-left: 2px solid rgba(255, 255, 255, .2);
+    text-align: left;
+}
+
+.mv-sec-text:nth-child(even) {
+    padding-right: 5rem;
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    text-align: right;
+}
+
+/* .mv-sec-text .mv-sec-text-desc {
+    padding-left: 8rem;
+    border-left: 2px solid rgba(255, 255, 255, .2);
+} */
+
+.mv-sec-text h2 {
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+.mv-sec-text .mv-sec-text-desc--p {
+    margin: 5.5rem 0 4rem;
+    font-size: 1.8rem;
+}
+
+.mv-sec-text .mv-sec-text-desc--p p {
+    margin-bottom: 1.5rem;
+    line-height: 3rem;
+}
+
+.mv-sec-img img{
+    width: 45rem;
+}
+
+.v-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.vid-sec {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.overlay-text {
+    position: absolute;
+}
+
+.overlay-text h2 {
+    text-transform: uppercase;
+}
+
+.vid-sec video {
+    width: 100%;
+}
+
+footer {
+    padding: 12.5rem 0 22.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+footer .circular-text {
+    margin-top: -27rem;
+    z-index: 9;
+    margin-bottom: 5rem;
+}
+
+.circular-text img {
+    width: 20rem;
+    animation: dopeRound 30s linear infinite;
+}
+
+@keyframes dopeRound {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+footer p {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-bottom: 2rem;
+}
+
+footer a {
+    font-size: 6.4rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    position: relative;
+}
+
+footer a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .2rem;
+    width: 0;
+    background-color: #fff;
+    transition: all ease 1s;
+}
+
+footer a:hover::before {
+    width: 100%;
+}
