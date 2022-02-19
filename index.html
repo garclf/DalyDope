@@ -17,49 +17,80 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <main id="luxy">
-        <header>
-            <div class="logo" data-aos="fade-down" data-aos-duration="1500">
-                <img src="./imgs/DalyDope_New_White.png" alt="" srcset="">
-            </div>
+<body class="main">
+    <!-- <main id="luxy"> -->
+        <header class="luxy_el">
+            <div class="logo" data-aos="fade-down" data-aos-duration="1500"></div>
             <div class="navigation-right" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
             </div>
         </header>
     
-        <section class="banner luxy_el">
+        <section id="home" class="banner luxy_el">
             <div class="container">
                 <div class="splash-text">
                     <h1 data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1300">Your Vibe <br>attracts your Tribe</h1>
-                    <p data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="2000">Your body is your most <br>priceless possession</p>
-                    <a data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2800"class="btn" href="#">Take Care of It</a>
+                    <a data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200"class="btn" href="#">Experience Your Tribe</a>
                 </div>
             </div>
         </section>
-    
-        <section class="mv-container luxy_el">
-           <div class="m-sec">
-                <div class="mv-sec-text">
-                    <h2>Daly Dope <br>Mission</h2>
-                    <div class="mv-sec-text-desc">
-                        <div class="mv-sec-text-desc--p">
-                            <p>Daly Dope takes pride in the unique and luxurious atmosphere that we have created for our customers. 
-                                Our biggest desire is to educate our customers and provide you with the  highest quality marijuana products at the best possible price.  
-                                With a wide selection of flower, edibles, concentrates, topicals, and CBD products, our goal is to be recognized as one of Michigan's best locally 
-                                owned provisioning centers. 
-                            </p>
+
+        <section id="about-us" class="mv-container luxy_el">
+            <div class="m-sec">
+                 <div class="mv-sec-text">
+                     <h2>Daly Dope <br>Mission</h2>
+                     <div class="mv-sec-text-desc--p">
+                         <p>Daly Dope takes pride in the unique and luxurious atmosphere that we have created for our customers. 
+                             Our biggest desire is to educate our customers and provide you with the  highest quality marijuana products at the best possible price. <br> <br>
+                             With a wide selection of flower, edibles, concentrates, topicals, and CBD products, our goal is to be recognized as one of Michigan's best locally 
+                             owned provisioning centers. 
+                         </p>
+                     </div>
+                     
+                 </div>
+                 <div class="mv-sec-img">
+                     <img src="imgs/mission.png" alt="" srcset="">
+                 </div>
+            </div>
+         </section>
+
+        <section id="services">
+            <div class="serv-sect">
+                <h2>Our Services</h2>
+                <div class="serv-cont">
+                    <div class="card">
+                        <div class="service-img">
+                            <img src="./imgs/cards/bud_b.png" alt="" srcset="">
+                        </div>
+                        <div class="service-text">
+                            <h3>Service 1</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="service-img">
+                            <img src="./imgs/cards/edibles_b.png" alt="" srcset="">
+                        </div>
+                        <div class="service-text">
+                            <h3>Service 1</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="service-img">
+                            <img src="./imgs/cards/vape_b.png" alt="" srcset="">
+                        </div>
+                        <div class="service-text">
+                            <h3>Service 1</h3>
                         </div>
                     </div>
                 </div>
-                <div class="mv-sec-img">
-                    <img src="imgs/mission.png" alt="" srcset="">
                 </div>
-           </div>
+                
+           
         </section>
     
         <section class="mv-container luxy_el">
@@ -87,20 +118,44 @@
             <div class="overlay-text">
                 <h2>Relax and Unwind</h2>
             </div>
-            <video preload muted loop poster="imgs/arthouse_ad_2_poster.png">
+            <video class="video-cover" preload muted loop poster="imgs/arthouse_ad_2_poster.png">
                 <source src="videos/arthouse_ad_2.mp4" type="video/mp4">
             </video>
     
         </section>
     
-        <footer class="luxy_el">
-            <div class="circular-text">
+        <section id="contact-us" class="contact-us">
+            <!-- <div class="circular-text">
                 <img src="imgs/DopeRound_white.png" alt="" srcset="">
+            </div> -->
+            <div class="title">
+                <h2 class="title-text">Contact Us</h2>
+                <p>We are more than happy to answer your inquiries ASAP</p>
             </div>
-            <p>For Inquiry</p>
-            <a href="mailto:info@dalydope.com">info@dalydope.com</a>
-        </footer>
-    </main>
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <div class="input-box">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+                <div class="circular-text-contact">
+                    <img src="imgs/DopeRound_white.png" alt="" srcset="">
+                </div>
+            </div>
+            
+            <!-- <a href="mailto:info@dalydope.com">info@dalydope.com</a> -->
+        </section>
+    <!-- </main> -->
    
 
     <!-- JQUERY -->
@@ -114,13 +169,18 @@
 
     <script type="text/javascript">
 
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+
         AOS.init();
 
-        luxy.init({
-            wrapper: '#luxy',
-            targets: '.luxy-el',
-            wrapperSpeed: 0.08
-        })
+        // luxy.init({
+        //     wrapper: '#luxy',
+        //     targets: '.luxy-el',
+        //     wrapperSpeed: 0.08
+        // })
 
         $(document).ready(function() {
             $(".vid-sec video").hover( function() {
