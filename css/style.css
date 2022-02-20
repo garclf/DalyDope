@@ -4,29 +4,29 @@
 *   HEADER SECTION
 **************************/
 
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 3.2rem;
     background-color: #000;
-    font-family: 'Roboto';
+    font-family: 'Roboto'; */
 
     /* To make the header sticky */
-    height: 9.6rem;
+    /* height: 9.6rem;
 
     padding: 0 4.8rem;
-}
+} */
 
 .logo {
-    width: 9.6rem;
+    width: 12.8rem;
 }
 
 /*************************
 *   NAVIGATION SECTION
 **************************/
 
-.main-nav-list {
+/* .main-nav-list {
     list-style-type: none;
     display: flex;
     gap: 3.2rem;
@@ -57,12 +57,12 @@ header {
     display: inline-block;
     padding: 1.2rem 2.4rem;
     color: #1a1a1a;
-}
+} */
 
 /*************************
 *   HERO SECTION
 **************************/
-.hero-container {
+/* .hero-container {
     display: grid;
     position: relative;
     min-height: 100vh;
@@ -77,6 +77,62 @@ header {
     background-position: top;
     justify-content: center;
     padding: 4.8rem 0 8rem 0;
+} */
+
+.showcase {
+    /* position: absolute; */
+    right: 0;
+    /* width: 100%; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    z-index: 3;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 10rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.toggle {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background: url('../imgs/menu_w.png') no-repeat;
+    background-size: 3rem;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('../imgs/close_w.png') no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.showcase video {
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-text-box {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-overlay {
+    background: #5c5c5c;
+    mix-blend-mode: overlay;
 }
 
 .hero {
@@ -109,10 +165,40 @@ header {
 }
 
 .service-img-box {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.service-img-box::before,
+.service-img-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.service-img-box::before {
+    width: 50%;
+
+    padding-bottom: 50%;
+    background-color: #efefef;
+    
+}
+
+.service-img-box::after {
+    width: 40%;
+    padding-bottom: 40%;
+    background-color: #fafafa;
+}
+
 .service-img {
-    width: 44%;
+    width: 30%;
+    z-index: 3;
 }
