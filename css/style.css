@@ -1,88 +1,52 @@
-
-
 /*************************
 *   HEADER SECTION
 **************************/
-
-/* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3.2rem;
-    background-color: #000;
-    font-family: 'Roboto'; */
-
-    /* To make the header sticky */
-    /* height: 9.6rem;
-
-    padding: 0 4.8rem;
-} */
-
 .logo {
     width: 12.8rem;
 }
 
-/*************************
-*   NAVIGATION SECTION
-**************************/
-
-/* .main-nav-list {
-    list-style-type: none;
+.main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 100%;
     display: flex;
-    gap: 3.2rem;
     align-items: center;
+    justify-content: center;
+}
+
+.main-nav-list {
+    position: relative;
+    list-style-type: none;
+}
+
+.main-nav-list li {
+    margin-bottom: 2.2rem;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
     text-decoration: none;
-    color: #e5e5e5;
+    color: #121212;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-family: 'Roboto';
-    transition: all 1s;
+    transition: all .4s;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-    background-color: #e5e5e5;
-    display: inline-block;
-    padding: 1.2rem 2.4rem;
-    color: #1a1a1a;
+    color: #a3a3a3;
 }
-
-.main-nav-link.nav-cta:link,
-.main-nav-link.nav-cta:visited {
-    background-color: #e5e5e5;
-    display: inline-block;
-    padding: 1.2rem 2.4rem;
-    color: #1a1a1a;
-} */
 
 /*************************
 *   HERO SECTION
 **************************/
-/* .hero-container {
-    display: grid;
-    position: relative;
-    min-height: 100vh;
-    background: 
-    linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, .6),
-        rgba(0, 0, 0, .9)
-    ),
-    url(../imgs/banner.jpg) no-repeat;
-    background-size: cover;
-    background-position: top;
-    justify-content: center;
-    padding: 4.8rem 0 8rem 0;
-} */
 
 .showcase {
-    /* position: absolute; */
+    position: relative;
     right: 0;
-    /* width: 100%; */
     min-height: 100vh;
     padding: 10rem;
     display: flex;
@@ -90,6 +54,11 @@
     align-items: center;
     background-color: #000;
     z-index: 3;
+    transition: all .5s;
+}
+
+.showcase.active {
+    right: 30rem;
 }
 
 .showcase header {
@@ -140,7 +109,7 @@
     mix-blend-mode: overlay;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 798px) {
     .showcase,
     .showcase header {
         padding: 40px;

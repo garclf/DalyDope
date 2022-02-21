@@ -36,31 +36,22 @@
             </h1>
             <a href="#" class="btn">Discover More</a>
         </div>
-        <!-- <a href="#" class="btn">Discover More</a> -->
-
-        
-        <!-- <div class="main-nav">
-            <ul class="main-nav-list">
-                <li>
-                    <a class="main-nav-link nav-cta" href="#">Home</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">About Us</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Services</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div> -->
-        <!-- <section class="hero-container">
-            
-            <div class="hero">
-                
-            </div>
-        </section> -->
+    </section>
+    <section class="main-nav">
+        <ul class="main-nav-list">
+            <li>
+                <a class="main-nav-link nav-cta" href="#">Home</a>
+            </li>
+            <li>
+                <a class="main-nav-link" href="#">About Us</a>
+            </li>
+            <li>
+                <a class="main-nav-link" href="#">Services</a>
+            </li>
+            <li>
+                <a class="main-nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
     </section>
     <main>
         <section class="section-how">
@@ -132,6 +123,14 @@
         </section>
     </main>
     
-       
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
