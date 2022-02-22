@@ -36,25 +36,27 @@
             </h1>
             <a href="#" class="btn">Discover More</a>
         </div>
+
+        <section class="main-nav">
+            <ul class="main-nav-list">
+                <li>
+                    <a class="main-nav-link nav-cta" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="main-nav-link" href="#services">Services</a>
+                </li>
+                <li>
+                    <a class="main-nav-link" href="#">About Us</a>
+                </li>
+                <li>
+                    <a class="main-nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </section>
     </section>
-    <section class="main-nav">
-        <ul class="main-nav-list">
-            <li>
-                <a class="main-nav-link nav-cta" href="#">Home</a>
-            </li>
-            <li>
-                <a class="main-nav-link" href="#">About Us</a>
-            </li>
-            <li>
-                <a class="main-nav-link" href="#">Services</a>
-            </li>
-            <li>
-                <a class="main-nav-link" href="#">Contact Us</a>
-            </li>
-        </ul>
-    </section>
+   
     <main>
-        <section class="section-how">
+        <section class="section-how" id="services">
             <div class="container">
                 <span class="subheading">What we offer</span>
                 <h2 class="heading-secondary">All you need in one single place</h2>
@@ -126,10 +128,17 @@
     <script>
         const menuToggle = document.querySelector('.toggle');
         const showcase = document.querySelector('.showcase');
+        const links = document.querySelector('.main-nav-link');
+        console.log(links);
 
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             showcase.classList.toggle('active');
+        })
+
+        links.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            showcase.classList.remove('active');
         })
     </script>
 </body>
